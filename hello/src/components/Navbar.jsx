@@ -1,41 +1,31 @@
+import react from "react";
 import { Link } from "react-router-dom";
+
+
 export const Navbar = () => {
   return (
-    <nav style={{ backgroundColor: "#8000ff", padding: 20,display:"flex" , gap:"20px",textDecoration:"None" }}>
+    <nav style={{ backgroundColor: "#8000ff", padding: 20 }}>
       {/* 
                 all the links in navbar,
       IMPORTANT: Link should match as mentioned in problem statement 
-      */}
-      <div>
-      <Link to="/">Home</Link>
 
-      </div>
-      <div>
-      <Link to="/about">About</Link>
+  */}
+      
+      <nav>
 
-      </div>
-      <div>
-      <Link to="/products">Product</Link>
+      <Link className="nav-home"  to={"/"}>Home</Link>
 
-      </div>
+   
 
-      <div>
-      <Link to="/products/men">Men</Link>
+      <Link className="nav-home"  to={"/about"}>About</Link>
 
-      </div>
-      <div>
-      <Link to="/products/women">Women</Link>
-
-      </div>
-      <div>
-      <Link to="/products/kids">Kids</Link>
-
-      </div>
-      <div>
-      <Link to="/products/homedecor">Homedecor</Link>
-
-      </div>
-
+      <Link className="nav-home"  to={ "/products"}>Products</Link>
+      <Link className="nav-home" to={"/products/men"}>Men</Link>
+      <Link className="nav-home" to={"/products/women"}>Women</Link>
+      <Link className="nav-home" to={ "/products/kids"}>Kids</Link>
+      <Link className="nav-home" to={  "/products/homedecor"}>Home Decor</Link>
+      
+    </nav>
     </nav>
   );
 };
